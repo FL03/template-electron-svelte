@@ -1,2 +1,14 @@
-# Project exclude paths
-/node_modules/
+# Enviroments
+/**/venv/
+
+/**/node_modules/
+/**/package-lock.json
+/**/yarn.lock
+
+# IDE's
+/**/.idea/
+/**/.vscode/
+
+# Svelte
+/**/.svelte-kit/
+/**/build/
