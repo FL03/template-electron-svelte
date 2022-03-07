@@ -1,5 +1,10 @@
 # Enviroments
+/**/__pycache__/
 /**/venv/
+
+/**/.env
+/**/*.env.*
+!/**/*.env.example
 
 /**/node_modules/
 /**/package-lock.json
@@ -10,5 +15,6 @@
 /**/.vscode/
 
 # Svelte
+/**/__sapper__/
 /**/.svelte-kit/
 /**/build/
