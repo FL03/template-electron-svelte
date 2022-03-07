@@ -1,7 +1,7 @@
 # electron-svelte
 
 ## Quickstart
-  npm run install
-  npm run dev
+    npm run install
+    npm run dev
  
  
