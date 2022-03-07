@@ -31,7 +31,7 @@
   "name": "electron-svelte",
   "scripts": {
     "dev": "npm run electron",
-    "electron": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron": "concurrently  \"wait-on http://localhost:3000 \" \"electron .\" \"npm run frontend:dev\"",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "frontend:dev": "svelte-kit dev",
     "frontend:build": "svelte-kit build",

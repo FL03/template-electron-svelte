@@ -1,0 +1,10 @@
+:root {
+    --dark: #333;
+    --light: mintcream;
+
+}
+
+:before, :after {
+    box-sizing: border-box;
+}
+
