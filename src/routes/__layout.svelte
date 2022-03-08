@@ -1,6 +1,16 @@
 <script lang="ts">
+	import { store as authStore } from "$lib/auth";
 	import Header from "$lib/header/Header.svelte";
 	import "../app.css";
+
+	export async function load({ fetch }) {
+		const res = await fetch("/api/user");
+		const { user } = await res.json();
+		authStore.set(user);
+		return {
+			status: 200
+		};
+	}
 </script>
 
 <Header />

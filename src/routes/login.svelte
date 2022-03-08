@@ -1,9 +1,17 @@
 <!-- src/routes/login.svelte -->
 <script lang="ts">
+  import * as auth from "$lib/auth";
+  import { goto } from "$app/navigation";
+
   let email = "";
 
-  function login() {
-    console.log(email);
+  async function login() {
+    try {
+      await auth.login(email);
+      goto("/todos");
+    } catch (err) {
+      console.log(err);
+    }
   }
 </script>
 

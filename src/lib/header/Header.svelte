@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import { logout, store as authStore } from "$lib/auth";
 	import logo from "./svelte-logo.svg";
+
+	$: user = $authStore;
 </script>
 
 <header>
@@ -30,9 +33,17 @@
 
 	<div class="corner">
 		<ul>
-			<li class:active={$page.url.pathname === '/login'}>
-				<a href="/login" sveltekit:prefetch>Login</a>
-			</li>
+			{#if user}
+				<li class:active={$page.url.pathname === '/login'}>
+					<a href="/auth" on:click|preventDefault={logout}>
+						Logout
+					</a>
+				</li>
+			{:else}
+				<li class:active={$page.url.pathname === '/login'}>
+					<a href="/login">Login</a>
+				</li>
+			{/if}
 		</ul>
 	</div>
 </header>
