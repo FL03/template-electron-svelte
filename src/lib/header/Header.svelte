@@ -29,7 +29,11 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<ul>
+			<li class:active={$page.url.pathname === '/login'}>
+				<a href="/login" sveltekit:prefetch>Login</a>
+			</li>
+		</ul>
 	</div>
 </header>
 
