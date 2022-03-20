@@ -1,20 +1,33 @@
-# Enviroments
-/**/__pycache__/
-/**/venv/
+# Files
+*.env
+*.env.*
+!*.env.example
 
-/**/.env
-/**/*.env.*
-!/**/*.env.example
+*.lock
+*.lock.*
+*-lock.*
 
-/**/node_modules/
-/**/package-lock.json
-/**/yarn.lock
+*.log
+*.log.*
 
-# IDE's
+*.whl
+*.whl.*
+
+*.zip
+*.zip.*
+
+# General
 /**/.idea/
 /**/.vscode/
 
+/**/__pycache__/
+
+/**/node_modules/
+/**/venv/
+
+
 # Svelte
+/**/.DS_STORE/
 /**/__sapper__/
 /**/.svelte-kit/
 /**/build/
